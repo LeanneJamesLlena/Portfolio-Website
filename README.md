@@ -14,9 +14,10 @@ This website serves as my personal digital portfolio - showcasing who I am, the 
 
 ## Features
 
-- Modern dark theme with responsive design  
+- Modern dark theme with responsive layouts, adaptive text, and buttons 
 - Projects showcase page  
-- About Me section (skills, education, and background)  
+- About Me section (skills, education, and background)
+  - Interactive skill tags: hover to reveal additional details 
 - Contact form integrated with EmailJS 
 - Smooth transitions and clean UI design   
 
