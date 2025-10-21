@@ -1,13 +1,14 @@
 #  Personal Portfolio Website
 
+## Built & Designed by Leanne James Llena
+
+A modern, responsive portfolio website that highlights my skills, projects, and background as a software engineering student.
 
 ## Overview
-A responsive portfolio website showcasing my projects, skills, and background.
 
-This is my personal portfolio website — designed to highlight who I am, what I’ve built, and how to connect with me.  
-It’s fully responsive and modern.
+This website serves as my personal digital portfolio - showcasing who I am, the technologies I work with, and the projects I've built.
 
-## LIVE DEMO TO BE ADDED!
+## LIVE DEMO NOT DONE YET SOON TO BE ADDED!
 🔗 **Live Demo:** [https://yourusername.github.io/portfolio-website](https://yourusername.github.io/portfolio-website)  
 📧 **Contact:** leannellena@yahoo.com  
 
@@ -16,8 +17,8 @@ It’s fully responsive and modern.
 - Modern dark theme with responsive design  
 - Projects showcase page  
 - About Me section (skills, education, and background)  
-- Contact form and email integration  
-- Smooth transitions and polished UI details   
+- Contact form integrated with EmailJS 
+- Smooth transitions and clean UI design   
 
 ## Built With
 
@@ -26,22 +27,23 @@ It’s fully responsive and modern.
 - Javascript
 - CSS
 
-**Tools & Deployment:**
+**Tools & Deployment(ADD THIS SOON VERCEL?):**
 - Git & GitHub  
 - VS Code  
+- EmailJS (for contact form)
 
 ## Installation
 
 If you want to run the project locally:
 
-# Clone the repository
+### 1. Clone the repository
 git clone https://github.com/LeanneJamesLlena/portfolio-website.git
 
-# Navigate to the project folder
+### 2. Navigate to the project folder
 cd portfolio-website
 
-# Install dependencies
-npm install
+### 3. Install dependencies
+npm install(NOTE! make sure you are in the root directory)
 
-# Run the development server
+### Last step: Run the development server
 npm run dev
