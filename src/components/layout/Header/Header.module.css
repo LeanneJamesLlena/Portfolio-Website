@@ -1,3 +1,5 @@
+
+/* Container*/
 .header {
   position: sticky;
   top: 0;
@@ -6,7 +8,7 @@
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-
+/* Flex container for logo + navigation */
 .row {
   display: flex;
   align-items: center;
@@ -21,13 +23,14 @@
   color: var(--text);
   transition: color .25s ease .05s, transform .25s ease .05s;
 }
+/* Hover/Focus animation for brand logo */
 .brand:hover,
 .brand:focus-visible {
   color: var(--accent);
   transform: translateY(-1px) scale(1.04);
   animation: jiggle .22s ease both .05s; /* tiny, delayed jiggle */
 }
-
+/* Micro animation for logo hover interaction */
 @keyframes jiggle {
   0%   { transform: translateY(0) scale(1); }
   35%  { transform: translateY(-1.5px) scale(1.045) rotate(-0.3deg); }
@@ -35,12 +38,14 @@
   100% { transform: translateY(-1px) scale(1.04) rotate(0deg); }
 }
 
-/* ——— Nav (desktop) ——— */
+/*Desktop Navigation*/
 .nav {
   margin-left: auto;
   display: flex;
   gap: 22px;
 }
+
+/* Base nav link style */
 .link {
   position: relative;
   color: var(--muted);
@@ -48,7 +53,9 @@
   padding: 8px 0;
   transition: color .18s ease, transform .18s ease;
 }
+/* Hover state for nav links */
 .link:hover { color: var(--text); transform: translateY(-1px); }
+/* Active link styling (for current page) */
 .active { color: var(--accent); }
 .active::after {
   content: "";
@@ -56,7 +63,7 @@
   background: var(--accent); border-radius: 2px;
 }
 
-/* ——— Burger ——— */
+/*Burger Menu*/
 .burger {
   display: none;
   margin-left: auto;
