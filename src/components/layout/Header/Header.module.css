@@ -1,0 +1,92 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(15, 18, 22, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+}
+
+/* ——— Logo ——— */
+.logo { display: inline-flex; align-items: center; }
+.brand {
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--text);
+  transition: color .25s ease .05s, transform .25s ease .05s;
+}
+.brand:hover,
+.brand:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px) scale(1.04);
+  animation: jiggle .22s ease both .05s; /* tiny, delayed jiggle */
+}
+
+@keyframes jiggle {
+  0%   { transform: translateY(0) scale(1); }
+  35%  { transform: translateY(-1.5px) scale(1.045) rotate(-0.3deg); }
+  70%  { transform: translateY(.5px) scale(1.02) rotate(0.2deg); }
+  100% { transform: translateY(-1px) scale(1.04) rotate(0deg); }
+}
+
+/* ——— Nav (desktop) ——— */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 22px;
+}
+.link {
+  position: relative;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color .18s ease, transform .18s ease;
+}
+.link:hover { color: var(--text); transform: translateY(-1px); }
+.active { color: var(--accent); }
+.active::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+  background: var(--accent); border-radius: 2px;
+}
+
+/* ——— Burger ——— */
+.burger {
+  display: none;
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.burgerLine {
+  width: 22px; height: 2px; background: var(--text);
+  display: block; margin: 4px 0;
+}
+
+/* ——— Mobile layout ——— */
+@media (max-width: 820px) {
+  .burger { display: inline-block; }
+  .nav {
+    position: fixed;
+    inset: 60px 0 auto 0;
+    background: var(--panel);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: grid;
+    gap: 0;
+    transform: translateY(-130%);
+    transition: transform .2s ease;
+    padding: 6px 0;
+  }
+  .nav a {
+    padding: 16px var(--gutter, 24px);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .open { transform: translateY(0); }
+}

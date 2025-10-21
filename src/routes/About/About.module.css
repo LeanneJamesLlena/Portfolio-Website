@@ -1,0 +1,209 @@
+/* ===== Layout rhythm + hierarchy ===== */
+.wrap { padding: 48px 0 32px; }
+
+.head { max-width: 62ch; }
+.title {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+.accent { color: var(--accent); text-shadow: 0 0 14px rgba(67,224,227,.28); }
+
+.lead {
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+/* thin teal divider to separate sections */
+.sectionRule {
+  height: 1px;
+  margin: 26px 0;
+  background: linear-gradient(90deg, transparent, rgba(67,224,227,.45), transparent);
+  filter: drop-shadow(0 0 10px rgba(67,224,227,.25));
+}
+
+/* generic section shell */
+.section { display: grid; gap: 12px; }
+.sectionHead { display: flex; align-items: baseline; justify-content: space-between; }
+
+.sectionTitleSmall {
+  font-size: 16px;
+  letter-spacing: .3px;
+  color: var(--text);
+  font-weight: 800;          /* smaller but bolder */
+}
+
+/* title with subtle border/glow for Education */
+.sectionTitleGlow {
+  font-size: 18px;
+  font-weight: 800;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+  text-shadow: 0 0 10px rgba(67,224,227,.25);
+}
+
+/* ===== Skills (3 columns) ===== */
+.skillCols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+}
+
+.groupTitle {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0 0 8px 2px;
+  letter-spacing: .3px;
+}
+
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+}
+
+.chip {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(67,224,227,.55);
+  box-shadow: 0 0 16px rgba(67,224,227,.28);
+}
+
+/* tiny tooltip on hover (no JS) */
+.chip::after {
+  content: attr(data-hint);
+  position: absolute;
+  left: 50%; transform: translateX(-50%) translateY(6px);
+  bottom: -26px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(15,18,22,.9);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 6px;
+  padding: 6px 8px;
+  transition: opacity .12s ease, transform .12s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.chip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Education timeline ===== */
+.timeline {
+  list-style: none; margin: 0; padding: 6px 0 0 0;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute; left: 10px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, rgba(67,224,227,.8), rgba(67,224,227,.15));
+  border-radius: 2px;
+  filter: drop-shadow(0 0 12px rgba(67,224,227,.35));
+}
+
+.eduItem {
+  display: grid; grid-template-columns: 20px 1fr;
+  gap: 12px; padding: 8px 0 10px;     /* tighter vertical rhythm */
+}
+
+.dot {
+  width: 12px; height: 12px; border-radius: 999px; margin-top: 4px;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(67,224,227,.8);  /* brighter */
+}
+
+.eduBlock { padding-bottom: 2px; }
+.eduHeading { font-weight: 700; color: var(--text); }
+.eduMeta { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.eduFocus { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .skillCols { grid-template-columns: 1fr 1fr; }
+  .skillList { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 40px 0 26px; }
+  .skillCols { grid-template-columns: 1fr; }
+}
+
+
+/* --- Beyond code / life card --- */
+.lifeCard {
+  position: relative;
+  padding: 20px 22px 16px;
+  border-radius: var(--radius);
+  border: none; /* remove the harsh border */
+  background: linear-gradient(180deg, rgba(18, 24, 32, 0.95), rgba(10, 14, 20, 0.9));
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    0 0 35px rgba(67, 224, 227, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* thin vertical accent on the left to echo the overall style */
+.lifeAccent {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(67, 224, 227, 0.8), rgba(67, 224, 227, 0.25));
+  box-shadow: 0 0 20px rgba(67, 224, 227, 0.3);
+}
+.lifeText {
+  color: var(--text);
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+
+/* optional chips under the sentence */
+.lifeChips {
+  list-style: none;
+  padding: 0; margin: 8px 0 0;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.lifeChip {
+  padding: 6px 10px;
+  font-size: 13px; font-weight: 600;
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.lifeChip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(67,224,227,.55);
+  box-shadow: 0 0 14px rgba(67,224,227,.25);
+}
+
+/* mobile spacing tweak */
+@media (max-width: 640px){
+  .lifeCard { padding: 16px 14px 12px; }
+}
+
