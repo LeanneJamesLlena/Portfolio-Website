@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import s from "./Contact.module.css";
+/**
+ * Contact Component
+ * Renders a two-column contact section:
+ * - Left side: personal contact info, email, and links
+ * - Right side: validated contact form using EmailJS
+ */
 
 function Contact() {
   const formRef = useRef(null);
@@ -26,7 +32,7 @@ function Contact() {
       return "Please enter a valid email address.";
     }
 
-    return null; // ✅ no errors
+    return null; 
   };
 
   const onSubmit = async (e) => {
@@ -38,7 +44,7 @@ function Contact() {
 
     if (validationError) {
       setStatus({ type: "err", msg: validationError });
-      return; // 🚫 stop if invalid
+      return; 
     }
 
     setLoading(true);

@@ -1,6 +1,9 @@
 import s from "./About.module.css";
 
-
+/**
+ * Skill categories grouped by area.
+ * Each skill includes a short 'hint' shown as a tooltip or for accessibility context.
+ */
 const skills = {
   Frontend: [
     { label: "React", hint: "(hooks, routing, dynamic component-based UIs)" },
@@ -20,7 +23,11 @@ const skills = {
     { label: "C", hint: "Foundations, memory basics" },
   ],
 };
-
+/**
+ * About Component
+ * Displays a personal introduction, skills overview, education timeline,
+ * and interests beyond coding.
+ */
 function About() {
   return (
     <section className={`container ${s.wrap}`}>
@@ -114,7 +121,7 @@ function About() {
             and I love exploring new places whenever I can.
           </p>
 
-          {/* optional little interest chips — delete if you want only the sentence */}
+          {/* little interest chips  */}
           <ul className={s.lifeChips} role="list">
             <li className={s.lifeChip}>🏋️ Gym</li>
             <li className={s.lifeChip}>⚽ Sports</li>

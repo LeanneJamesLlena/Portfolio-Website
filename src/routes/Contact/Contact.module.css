@@ -1,15 +1,15 @@
-/* ===== Layout ===== */
+/*Layout*/
 .wrap {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: 36px;                  /* more air between columns */
-  padding: 56px 0 44px;       /* more top space, slightly tighter bottom */
+  gap: 36px;                 
+  padding: 56px 0 44px;       
 }
 
-/* ===== Left column (info) ===== */
+/*Left column (info)*/
 .infoCard {
   padding: 34px 36px;
-  border: none; /* remove border completely */
+  border: none; 
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(18, 24, 32, 0.95), rgba(10, 14, 20, 0.9));
   box-shadow:
@@ -22,9 +22,9 @@
   row-gap: 14px;
 }
 
-
+/* Title + intro text */
 .title {
-  font-size: clamp(30px, 4vw, 46px);  /* slightly larger headline */
+  font-size: clamp(30px, 4vw, 46px); 
   font-weight: 800;
   line-height: 1.08;
   margin: 0;
@@ -38,7 +38,8 @@
   opacity: .92;
   position: relative;
 }
-/* subtle divider like the reference */
+
+/* Decorative underline under subtitle */
 .sub::after {
   content: "";
   display: block;
@@ -48,39 +49,40 @@
   background: linear-gradient(90deg, var(--accent), transparent);
   border-radius: 2px;
 }
-
+/* Short paragraph under the intro */
 .lead {
   color: var(--muted);
-  line-height: 1.9;           /* easier reading */
+  line-height: 1.9;           
   margin-top: 2px;
 }
 
-/* contact meta block */
+/* Contact info container (email + socials) */
 .meta {
   margin-top: 10px;
   display: grid;
   row-gap: 14px;
 }
 
-/* email pill: taller + airier */
+/* Email link styled*/
 .mail {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   color: var(--text);
   font-weight: 700;
-  padding: 12px 14px;         /* was 8px 10px */
+  padding: 12px 14px;        
   border-radius: 12px;
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.06);
   transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
 }
+/* Glow + lift hover effect */
 .mail:hover {
   transform: translateY(-1px);
   border-color: rgba(67,224,227,.55);
   box-shadow: 0 0 16px rgba(67,224,227,.25);
 }
-
+/* Social links (GitHub, LinkedIn, CV) */
 .socials {
   display: flex;
   align-items: center;
@@ -93,7 +95,7 @@
   color: var(--muted);
   font-weight: 700;
   position: relative;
-  padding-bottom: 2px;                 /* space for underline */
+  padding-bottom: 2px;                
   transition: color .15s ease, text-shadow .15s ease;
 }
 .social::after {
@@ -116,11 +118,11 @@
   left: 0;
   right: 0;
 }
-
+/* Separator dot between socials */
 .dot { opacity: .5; }
 
 
-/* ===== Right column (form) – UNCHANGED ===== */
+/* Right column (form) */
 .formCard {
   padding: 24px;
   border: none;
@@ -134,16 +136,16 @@
 }
 
 .form { display: grid; gap: 14px; }
-
+/* Row for first/last name fields */
 .row {
   display: grid; gap: 12px;
   grid-template-columns: 1fr 1fr;
 }
-
+/* Field layout */
 .field { display: grid; gap: 6px; }
 .label { color: var(--muted); font-size: 14px; font-weight: 700; }
 .req { color: var(--accent); margin-left: 4px; }
-
+/* Text fields + textarea styling */
 input, textarea {
   width: 100%;
   color: var(--text);
@@ -154,6 +156,7 @@ input, textarea {
   outline: none;
   transition: border-color .15s ease, box-shadow .15s ease;
 }
+/* Focus glow on form inputs */
 input:focus, textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(67,224,227,.15), 0 0 22px rgba(67,224,227,.25);
@@ -165,6 +168,7 @@ textarea { resize: vertical; }
 .actions {
   display: flex; align-items: center; gap: 12px; margin-top: 6px;
 }
+/*send button */
 .btn {
   padding: 12px 20px;
   border-radius: 999px;
@@ -190,7 +194,7 @@ textarea { resize: vertical; }
 .ok { color: #7bf0f2; }
 .err { color: #ff8a91; }
 
-/* ===== Responsive ===== */
+/* Responsive*/
 @media (max-width: 980px) {
   .wrap { grid-template-columns: 1fr; gap: 20px; padding: 40px 0 36px; }
   .row { grid-template-columns: 1fr; }
@@ -199,11 +203,9 @@ textarea { resize: vertical; }
 @media (max-width: 640px) {
   .infoCard { padding: 22px; }
 }
-
-/* newcode*/
-
+/* Footer note (Below Form) */
 .bottomNote {
-  grid-column: 1 / -1;         /* span across both columns */
+  grid-column: 1 / -1;        
   text-align: center;
   margin-top: 40px;
   color: var(--muted);
@@ -224,7 +226,6 @@ textarea { resize: vertical; }
   opacity: 0.85;
 }
 
-/* slightly closer bottom alignment */
 .wrap {
   padding-bottom: 20px;
 }
@@ -232,20 +233,20 @@ textarea { resize: vertical; }
   margin-bottom: 20px;
 }
 
-/* soft teal shimmer for email hover */
+
+/*VISUAL ENHANCEMENTS */
+
 .mail:hover {
   background: rgba(67,224,227,0.08);
   border-color: rgba(67,224,227,0.4);
   box-shadow: 0 0 20px rgba(67,224,227,0.15);
 }
 
-
-/* === Subtle neon glow behind both cards === */
 .infoCard::before,
 .formCard::before {
   content: "";
   position: absolute;
-  inset: -4px; /* expand a few pixels outward */
+  inset: -4px; 
   border-radius: inherit;
   background: radial-gradient(
     circle at center,
@@ -262,5 +263,5 @@ textarea { resize: vertical; }
 .infoCard,
 .formCard {
   position: relative;
-  isolation: isolate; /* keeps glow contained */
+  isolation: isolate; 
 }
