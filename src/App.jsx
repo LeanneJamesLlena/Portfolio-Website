@@ -5,6 +5,14 @@ import Contact from './routes/Contact/Contact.jsx'
 import Home from './routes/Home/Home.jsx'
 import Projects from './routes/Projects/Projects.jsx'
 
+/**
+ * App Component
+ * Sets up the main page routes using React Router.
+ * The Layout component wraps all pages and keeps
+ * the Header and Footer visible on every route.
+ * Only the main page content changes when navigating from one page to another, thanks to the help of Outlet.
+ * This avoids repeating them on everypage and makes updates easier since the layout is manage in one place
+ */
 function App() {
     return(
         <Routes>
