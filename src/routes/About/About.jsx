@@ -24,7 +24,7 @@ const skills = {
   ],
 };
 /**
- * About Component
+ * Aboutt Component
  * Displays a personal introduction, skills overview, education timeline,
  * and interests beyond coding.
  */
