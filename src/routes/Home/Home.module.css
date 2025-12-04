@@ -7,7 +7,7 @@
   background-color: var(--bg);
 }
 
-/* ===== LEFT SIDE (text) ===== */
+/* ====-= LEFT SIDE (text) ===== */
 .textSection {
   flex: 1;
   color: var(--text);
