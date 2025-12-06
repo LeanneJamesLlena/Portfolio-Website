@@ -164,7 +164,7 @@ input:focus, textarea:focus {
 
 textarea { resize: vertical; }
 
-/* actions */
+/* actionns */
 .actions {
   display: flex; align-items: center; gap: 12px; margin-top: 6px;
 }
