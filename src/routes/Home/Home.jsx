@@ -4,7 +4,7 @@ import s from './Home.module.css'
  * Home Component
  * Landing section, introduction and role.
  * Includes a text block (intro + call-to-action) and
- * profile image
+ * profilee image
  */
 
 function Home() {
