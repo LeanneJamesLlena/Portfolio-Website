@@ -39,6 +39,13 @@
   max-width: 500px;
 }
 
+/* ===== BUTTON CONTAINER ===== */
+.buttonContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* ===== CV BUTTON ===== */
 .cvButton {
   padding: 12px 24px;

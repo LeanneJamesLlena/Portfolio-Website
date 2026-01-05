@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import s from './Home.module.css'
 
 /**
@@ -15,13 +16,18 @@ function Home() {
       <div className={s.textSection}>
         <h3>Hello, It's Me</h3>
         <h1>Leanne James Llena</h1>
-        <h2>Software Engineering Student @ LUT University</h2>
+        <h2>Full-Stack Software Engineer | Student @ LUT University</h2>
         <p>
           Passionate about learning, creating, and bringing ideas to life through code.
         </p>
-        <a href="/cv/LeanneJamesLlena_CV.pdf" target="_blank" rel="noopener noreferrer">
-          <button className={s.cvButton}>Check My CV</button>
-        </a>
+        <div className={s.buttonContainer}>
+          <a href="/cv/LeanneJamesLlena_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <button className={s.cvButton}>Check My CV</button>
+          </a>
+          <Link to="/projects">
+            <button className={s.cvButton}>View My Projects</button>
+          </Link>
+        </div>
       </div>
 
       <div className={s.imageSection}>
