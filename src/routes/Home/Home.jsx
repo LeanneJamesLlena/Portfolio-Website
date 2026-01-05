@@ -21,7 +21,7 @@ function Home() {
           Passionate about learning, creating, and bringing ideas to life through code.
         </p>
         <div className={s.buttonContainer}>
-          <a href="/cv/LeanneJamesLlena_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/cv/Resume_LeanneJamesLlena_2026.pdf" target="_blank" rel="noopener noreferrer">
             <button className={s.cvButton}>Check My CV</button>
           </a>
           <Link to="/projects">

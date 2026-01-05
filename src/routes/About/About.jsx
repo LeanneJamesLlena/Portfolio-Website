@@ -6,25 +6,34 @@ import s from "./About.module.css";
  */
 const skills = {
   Frontend: [
-    { label: "React", hint: "(hooks, routing, dynamic component-based UIs)" },
+    { label: "React", hint: "TanStack Query, Zustand, Router, custom hooks" },
+    { label: "TypeScript", hint: "Strict typing, Zod validation, type-safe components" },
+    { label: "Tailwind CSS", hint: "Utility-first styling, responsive design" },
     { label: "JavaScript", hint: "ES6+, async/await, modules" },
-    { label: "HTML", hint: "Semantic, accessible HTML" },
-    { label: "CSS", hint: "Responsive Designs, CSS Modules" },
   ],
   Backend: [
-    { label: "Node.js", hint: "Express APIs, auth" },
-    { label: "Express", hint: "REST, middleware" },
-    { label: "MongoDB", hint: "Mongoose, schema design" },
+    { label: "Node.js", hint: "RESTful APIs, middleware, async patterns" },
+    { label: "TypeScript", hint: "Type-safe APIs, Zod schemas, interfaces" },
+    { label: "Express", hint: "Routing, error handling, security middlewares, Express Validators" },
+    { label: "MongoDB", hint: "Mongoose, aggregation pipelines, indexing" },
     { label: "PostgreSQL", hint: "SQL basics, querying" },
+    { label: "SQLite", hint: "Lightweight database, embedded systems, local storage" },
   ],
-  Other: [
-    { label: "Git", hint: "Feature branches, PRs" },
-    { label: "Python", hint: "Scripting, basics" },
-    { label: "C", hint: "Foundations, memory basics" },
+  DevOps: [
+    { label: "Docker", hint: "Compose, multi-container apps, dev environments" },
+    { label: "Git & GitHub", hint: "Branching, PRs, collaboration workflows" },
+    { label: "CI/CD", hint: "GitHub Actions, automated testing & deployment" },
+    { label: "Testing", hint: "Vitest, unit & integration tests" },
+    { label: "Azure", hint: "Cloud services, app deployment, resource management" },
+  ],
+  Languages: [
+    { label: "Python", hint: "IoT data processing, Matplotlib, scripting" },
+    { label: "Java", hint: "OOP fundamentals, university coursework" },
+    { label: "C", hint: "Memory management, low-level programming" },
   ],
 };
 /**
- * Aboutt Component
+ * About Component
  * Displays a personal introduction, skills overview, education timeline,
  * and interests beyond coding.
  */
@@ -37,10 +46,10 @@ function About() {
           About <span className={s.accent}>Me</span>
         </h1>
         <p className={s.lead}>
-          I’ve always been curious about technology — even as a kid, I liked
+          I've always been curious about technology — even as a kid, I liked
           figuring out how things worked. That curiosity slowly turned into a
-          love for building things and solving problems through code. Now I’m a
-          third-year Software Engineering student at LUT University, still
+          love for building things and solving problems through code. Now I'm a
+          Software Engineering student at LUT University, still
           learning every day and exploring new technologies along the way.
         </p>
       </header>
@@ -86,20 +95,12 @@ function About() {
             <span className={s.dot} aria-hidden />
             <div className={s.eduBlock}>
               <div className={s.eduHeading}>
-                Tietotekniikan kandidaatti (BSc, Software Engineering)
+                Bachelor of Science (BSc), Software Engineering
               </div>
-              <div className={s.eduMeta}>LUT University • 2023 – ongoing</div>
+              <div className={s.eduMeta}>LUT University • 2023 – Present</div>
               <p className={s.eduFocus}>
-                Currently focusing on full-stack web development and QA testing.
+                Focusing on full-stack web development, software architecture, and quality assurance
               </p>
-            </div>
-          </li>
-
-          <li className={s.eduItem}>
-            <span className={s.dot} aria-hidden />
-            <div className={s.eduBlock}>
-              <div className={s.eduHeading}>Helsingin Media Lukio</div>
-              <div className={s.eduMeta}>2019 – 2022</div>
             </div>
           </li>
         </ol>
