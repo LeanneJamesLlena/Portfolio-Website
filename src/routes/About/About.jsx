@@ -132,7 +132,38 @@ function About() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className={s.sectionRule} />
 
+      {/* Spoken Languages */}
+      <section className={s.section} aria-labelledby="langs-heading">
+        <div className={s.sectionHead}>
+          <h2 id="langs-heading" className={s.sectionTitleGlow}>Languages</h2>
+        </div>
+
+        <ul className={s.languageList} role="list">
+          <li className={s.langItem}>
+            <span className={s.flag}>🇵🇭</span>
+            <span className={s.langName}>Tagalog</span>
+            <span className={s.langLevel}>Native</span>
+          </li>
+          <li className={s.langItem}>
+            <span className={s.flag}>🇫🇮</span>
+            <span className={s.langName}>Finnish</span>
+            <span className={s.langLevel}>C2 - Fluent</span>
+          </li>
+          <li className={s.langItem}>
+            <span className={s.flag}>🇬🇧</span>
+            <span className={s.langName}>English</span>
+            <span className={s.langLevel}>C2 - Fluent</span>
+          </li>
+          <li className={s.langItem}>
+            <span className={s.flag}>🇸🇪</span>
+            <span className={s.langName}>Swedish</span>
+            <span className={s.langLevel}>A2 - Basic</span>
+          </li>
+        </ul>
+      </section>
 
     </section>
   );
