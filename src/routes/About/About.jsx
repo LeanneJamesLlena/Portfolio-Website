@@ -6,7 +6,7 @@ import s from "./About.module.css";
  */
 const skills = {
   Frontend: [
-    { label: "React", hint: "TanStack Query, Zustand, Router, custom hooks" },
+    { label: "React", hint: "TanStack Query, Zustand, React Router, custom hooks" },
     { label: "TypeScript", hint: "Strict typing, Zod validation, type-safe components" },
     { label: "Tailwind CSS", hint: "Utility-first styling, responsive design" },
     { label: "JavaScript", hint: "ES6+, async/await, modules" },
@@ -14,17 +14,21 @@ const skills = {
   Backend: [
     { label: "Node.js", hint: "RESTful APIs, middleware, async patterns" },
     { label: "TypeScript", hint: "Type-safe APIs, Zod schemas, interfaces" },
-    { label: "Express", hint: "Routing, error handling, security middlewares, Express Validators" },
-    { label: "MongoDB", hint: "Mongoose, aggregation pipelines, indexing" },
+    { label: "Express", hint: "Routing, error handling, security middlewares, express-validator" },
+    { label: "MongoDB", hint: "Schema design, indexing"},
     { label: "PostgreSQL", hint: "SQL basics, querying" },
-    { label: "SQLite", hint: "Lightweight database, embedded systems, local storage" },
+    { label: "SQLite", hint: "Local development, lightweight storage" },
   ],
   DevOps: [
     { label: "Docker", hint: "Compose, multi-container apps, dev environments" },
     { label: "Git & GitHub", hint: "Branching, PRs, collaboration workflows" },
     { label: "CI/CD", hint: "GitHub Actions, automated testing & deployment" },
-    { label: "Testing", hint: "Vitest, unit & integration tests" },
     { label: "Azure", hint: "Cloud services, app deployment, resource management" },
+  ],
+  "Development & Quality": [
+    { label: "ESLint", hint: "Code linting, code quality enforcement" },
+    { label: "Prettier", hint: "Code formatting, consistent style" },
+    { label: "Vitest", hint: "Unit & integration tests" },
   ],
   Languages: [
     { label: "Python", hint: "IoT data processing, Matplotlib, scripting" },
