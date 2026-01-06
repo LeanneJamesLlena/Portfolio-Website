@@ -263,7 +263,7 @@ function Projects() {
               </div>
               <div className={s.cardActions}>
                 <a 
-                  href="https://amara-website-opal.vercel.app/" 
+                  href="https://amarasiivous.com" 
                   className={s.btnPrimary}
                   target="_blank" 
                   rel="noopener noreferrer"
