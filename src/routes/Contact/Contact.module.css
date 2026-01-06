@@ -82,7 +82,7 @@
   border-color: rgba(67,224,227,.55);
   box-shadow: 0 0 16px rgba(67,224,227,.25);
 }
-/* Social links (GitHub, LinkedIn, CV) */
+/* Social links (GitHub, CV) */
 .socials {
   display: flex;
   align-items: center;

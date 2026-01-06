@@ -96,11 +96,7 @@ function Contact() {
               GitHub
             </a>
             <span className={s.dot} aria-hidden>•</span>
-            <a href="https://www.linkedin.com/in/leanne-llena-381a8a234/" target="_blank" rel="noreferrer" className={s.social}>
-              LinkedIn
-            </a>
-            <span className={s.dot} aria-hidden>•</span>
-            <a href="/cv/LeanneJamesLlena_CV.pdf" target="_blank" rel="noreferrer" className={s.social}>
+            <a href="/cv/Resume_LeanneJamesLlena_2026.pdf" target="_blank" rel="noreferrer" className={s.social}>
               Check my CV
             </a>
           </div>

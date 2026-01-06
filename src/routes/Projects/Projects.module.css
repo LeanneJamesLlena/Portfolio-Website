@@ -334,13 +334,27 @@
     0 0 35px rgba(67, 224, 227, 0.08);
 }
 
+.cardImageLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 16px;
+}
+
 .cardImage {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 16px;
   background: rgba(15, 18, 22, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cardImageLink:hover .cardImage {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(67, 224, 227, 0.2);
+  border-color: rgba(67, 224, 227, 0.3);
 }
 
 .cardImage img {

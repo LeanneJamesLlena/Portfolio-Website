@@ -14,8 +14,8 @@ function Projects() {
           My <span className={s.accent}>Projects</span>
         </h1>
         <p className={s.lead}>
-          A collection of full-stack applications I've built, from food waste reduction to nutrition tracking. 
-          Each project demonstrates modern development practices including TypeScript, Docker, CI/CD, and comprehensive testing.
+        Full-stack applications showcasing modern development practices. 
+        Projects range from food waste reduction with TypeScript, Docker, Comprehensive Testing, and CI/CD to nutrition tracking and small business solutions
         </p>
       </header>
 
@@ -58,6 +58,8 @@ function Projects() {
             <span className={s.techPill}>Vitest</span>
             <span className={s.techPill}>Docker</span>
             <span className={s.techPill}>CI/CD</span>
+            <span className={s.techPill}>Vercel</span>
+            <span className={s.techPill}>Render</span>
           </div>
 
           <div className={s.highlights}>
@@ -174,44 +176,56 @@ function Projects() {
         </div>
 
         <div className={s.projectGrid}>
-          {/* NutriTrack Card */}
+          {/* Caloriq Card */}
           <article className={s.projectCard}>
-            <div className={s.cardImage}>
-              <img 
-                src="/projects/nutritrack.png" 
-                alt="NutriTrack calorie tracking dashboard" 
-              />
-            </div>
+            <a 
+              href="/projectsImages/calorie-tracker/Diary-view1(withData).png" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={s.cardImageLink}
+              aria-label="View full-size Caloriq diary view screenshot"
+            >
+              <div className={s.cardImage}>
+                <img 
+                  src="/projectsImages/calorie-tracker/Diary-view1(withData).png" 
+                  alt="Caloriq calorie tracking diary view with daily intake" 
+                />
+              </div>
+            </a>
             <div className={s.cardContent}>
-              <h3 className={s.cardTitle}>NutriTrack – Calorie Tracking App</h3>
+              <h3 className={s.cardTitle}>Caloriq – Calorie Tracking App</h3>
               <p className={s.cardDescription}>
                 Full-stack nutrition tracker with USDA API integration, meal logging, and interactive data visualizations 
                 for monitoring daily calorie intake and nutritional goals.
               </p>
               <div className={s.cardTech}>
                 <span className={s.cardTechPill}>React</span>
+                <span className={s.cardTechPill}>JavaScript</span>
                 <span className={s.cardTechPill}>Node.js</span>
+                <span className={s.cardTechPill}>Express</span>
                 <span className={s.cardTechPill}>MongoDB</span>
-                <span className={s.cardTechPill}>JWT Auth</span>
+                <span className={s.cardTechPill}>CSS Modules</span>
+                <span className={s.cardTechPill}>Vercel</span>
+                <span className={s.cardTechPill}>Render</span>
               </div>
               <div className={s.cardActions}>
                 <a 
-                  href="#" 
-                  className={s.cardBtn}
+                  href="https://calorie-tracker-frontend-ecru.vercel.app/" 
+                  className={s.btnPrimary}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="View NutriTrack live demo"
+                  aria-label="View Caloriq live demo"
                 >
-                  Live Demo
+                  View Live Demo
                 </a>
                 <a 
-                  href="#" 
-                  className={s.cardBtn}
+                  href="https://github.com/LeanneJamesLlena/calorie-tracker" 
+                  className={s.btnSecondary}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="View NutriTrack source code on GitHub"
+                  aria-label="View Caloriq source code on GitHub"
                 >
-                  GitHub
+                  View Code
                 </a>
               </div>
             </div>
@@ -219,41 +233,52 @@ function Projects() {
 
           {/* Cleaning Business Website Card */}
           <article className={s.projectCard}>
-            <div className={s.cardImage}>
-              <img 
-                src="/projects/cleaning-site.png" 
-                alt="Small business website homepage" 
-              />
-            </div>
+            <a 
+              href="/projectsImages/Amara/Amara_FrontpageView.png" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={s.cardImageLink}
+              aria-label="View full-size Amara business website screenshot"
+            >
+              <div className={s.cardImage}>
+                <img 
+                  src="/projectsImages/Amara/Amara_FrontpageView.png" 
+                  alt="Small business website homepage" 
+                />
+              </div>
+            </a>
             <div className={s.cardContent}>
-              <h3 className={s.cardTitle}>Small Business Website</h3>
+              <h3 className={s.cardTitle}>Cleaning Service Business Website</h3>
               <p className={s.cardDescription}>
-                Responsive website for local cleaning service with contact forms, service showcase, mobile-first design, 
-                and optimized performance achieving 95+ Lighthouse score.
+              Responsive business website for a local cleaning service, featuring 
+              service showcases, contact form, and mobile-optimized design to 
+              drive customer inquiries.
               </p>
               <div className={s.cardTech}>
-                <span className={s.cardTechPill}>React</span>
-                <span className={s.cardTechPill}>Tailwind CSS</span>
-                <span className={s.cardTechPill}>Netlify</span>
+                <span className={s.cardTechPill}>JavaScript</span>
+                <span className={s.cardTechPill}>HTML</span>
+                <span className={s.cardTechPill}>CSS</span>
+                <span className={s.cardTechPill}>Vercel</span>
+                <span className={s.cardTechPill}>EmailJS</span>
               </div>
               <div className={s.cardActions}>
                 <a 
-                  href="#" 
-                  className={s.cardBtn}
+                  href="https://amara-website-opal.vercel.app/" 
+                  className={s.btnPrimary}
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="View cleaning business website live site"
                 >
-                  Live Site
+                  View Live Site
                 </a>
                 <a 
-                  href="#" 
-                  className={s.cardBtn}
+                  href="https://github.com/LeanneJamesLlena/Amara-website" 
+                  className={s.btnSecondary}
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="View cleaning business website source code on GitHub"
                 >
-                  GitHub
+                  View Code
                 </a>
               </div>
             </div>
@@ -267,7 +292,7 @@ function Projects() {
       {/* GitHub CTA Section */}
       <section className={s.githubSection}>
         <p className={s.githubText}>
-          Want to see more? Check out my GitHub for additional projects and contributions.
+        Want to see the code? Check out my GitHub to explore the implementation details and architecture behind these projects
         </p>
         <a 
           href="https://github.com/LeanneJamesLlena" 
