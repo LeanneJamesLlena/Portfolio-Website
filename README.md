@@ -8,8 +8,7 @@ A modern, responsive portfolio website that highlights my skills, projects, and 
 
 This website serves as my personal digital portfolio - showcasing who I am, the technologies I work with, and the projects I've built.
 
-## LIVE DEMO NOT DONE YET SOON TO BE ADDED!
-🔗 **Live Demo:** [https://yourusername.github.io/portfolio-website](https://yourusername.github.io/portfolio-website)  
+🔗 **Live site:** [https://leannellena.dev](https://leannellena.dev)  
 📧 **Contact:** leannellena@yahoo.com  
 
 ## Features
