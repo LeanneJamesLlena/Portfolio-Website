@@ -95,10 +95,10 @@ function Contact() {
             <a href="https://github.com/LeanneJamesLlena" target="_blank" rel="noreferrer" className={s.social}>
               GitHub
             </a>
-            <span className={s.dot} aria-hidden>•</span>
+            {/* <span className={s.dot} aria-hidden>•</span>
             <a href="/cv/Resume_LeanneJamesLlena_2026.pdf" target="_blank" rel="noreferrer" className={s.social}>
               Check my CV
-            </a>
+            </a> */}
           </div>
         </div>
       </aside>
